@@ -1,0 +1,65 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "CO2 emissions, tonnes per capita (31 Dec 2018)",
+    "width": 800,
+    "height": 600,
+    "data": {
+      "url": "https://raw.githubusercontent.com/jpha0018/Assignment2/main/world_topoj.topojson",      
+      "format": {
+            "type": "topojson",
+            "feature": "custom.geo"
+          }
+    },
+    "projection": {
+        "type": "equalEarth"
+      },
+      "layer":[
+        {
+          "transform": [
+            {"calculate": "'Data is not available in ' + datum.properties.name_long", "as": "note"}
+          ],
+          "mark": {"type": "geoshape", "fill": "#e6e6e6", "stroke": "white"},
+          "encoding": {
+            "tooltip": {
+              "field": "note"
+            }
+          }
+        },
+        {
+
+        "transform": [{
+            "lookup": "properties.name_long",
+            "from": {
+            "data": {
+                "url": "https://raw.githubusercontent.com/jpha0018/Assignment2/main/2018_mapdata_tidy.csv"
+            },
+            "key": "Country",
+            "fields": ["CO2_per_capita", "GDP_per_capita"]
+            }
+        }
+        ],
+    
+        "mark": {
+        "type": "geoshape", "stroke": "white"
+        },
+        "encoding": {
+        "color": {
+            "field": "CO2_per_capita",
+            "type": "quantitative",
+            "scale": {
+            "type": "threshold",
+            "domain": [0.5, 5, 10, 15, 20, 25],
+            "range": ["#fff2cc", " #ffdf80", " #ffd24d", "#ffc61a", "#e6ac00","#b38600"," #806000"]
+        }
+        },
+        "tooltip": [
+            {"field": "properties.name_long", "type": "nominal", "title": "Country"},
+            {"field": "CO2_per_capita", "type": "quantitative", "title": "CO2 tonnes per capita"},
+            {"field": "GDP_per_capita", "type": "quantitative", "title": "GDP per capita (USD)"}
+        ]
+        }
+        
+    }
+      ]
+  
+  }
