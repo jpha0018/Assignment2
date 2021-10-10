@@ -20,7 +20,7 @@
             "input": "range",
             "min": 2000,
             "max": 2019,
-            "step": 5,
+            "step": 1,
             "name": "Year: "
           }
         }    
