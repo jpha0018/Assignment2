@@ -1,99 +1,103 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "CO2 emissions, tonnes per capita (2000-2019)",
-    "width": 800,
-    "height": 600,
-    "projection": {
-      "type": "equalEarth"
-    },
-    "params": [{
-        "name": "Year_selection",
-        "value": 2018,
-        "bind": {
-          "input": "range",
-          "min": 2000,
-          "max": 2019,
-          "step": 1,
-          "name": "Year: "
-        }
-      }    
-    ],   
-      "layer":[{
-        "data": {
-          "url": "https://raw.githubusercontent.com/jpha0018/Assignment2/main/world_topoj.topojson",      
-          "format": {
-                "type": "topojson",
-                "feature": "custom.geo"
-              }
-        }, 
-          "transform": [
-            {"calculate": "'Data is not available in ' + datum.properties.name_long", "as": "note"}],
-          "mark": {"type": "geoshape", "fill": "#e6e6e6", "stroke": "white"},
-          "encoding": {
-            "tooltip": {
-              "field": "note"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "CO2 emissions, tonnes per capita (2000-2019)",
+  "width": 800,
+  "height": 600,
+  "projection": {
+    "type": "equalEarth"
+  },
+  "params": [{
+      "name": "Year_selection",
+      "value": 2018,
+      "bind": {
+        "input": "range",
+        "min": 2000,
+        "max": 2018,
+        "step": 3,
+        "name": "Year: "
+      }
+    }    
+  ],   
+    "layer":[{
+      "data": {
+        "url": "https://raw.githubusercontent.com/jpha0018/Assignment2/main/world_topoj.topojson",      
+        "format": {
+              "type": "topojson",
+              "feature": "custom.geo"
             }
-          }
-        },
-        {
-          "data": {
-            "url": "https://raw.githubusercontent.com/jpha0018/Assignment2/main/co2_percapita_tidy.csv"
-        },
-        "transform": [{
-            "lookup": "Country",
-            "from": {
-            "data": {
-                "url": "https://raw.githubusercontent.com/jpha0018/Assignment2/main/world_topoj.topojson",      
-                "format": {
-                      "type": "topojson",
-                      "feature": "custom.geo"
-                    }
-            },
-            "key": "properties.name_long"
-              },
-              "as": "geo"
-            },
-            { "filter": "datum.Year == Year_selection" }        
-        ],
-    
-        "mark": {
-        "type": "geoshape", "stroke": "white"
-        },
+      }, 
+        "transform": [
+          {"calculate": "'Data is not available in ' + datum.properties.name_long", "as": "note"}],
+        "mark": {"type": "geoshape", "fill": "#e6e6e6", "stroke": "white"},
         "encoding": {
-        "color": {
-            "field": "CO2 per capita",
-            "type": "quantitative",
-            "scale": {
-            "type": "threshold",
-            "domain": [0.5, 5, 10, 15, 25], 
-            "range": ["#fff2cc", " #ffdf80", " #ffd24d", "#ffc61a", "#e6ac00","#b38600"]
+          "tooltip": {
+            "field": "note"
+          }
         }
-        },
-        "tooltip": [
-            {"field": "properties.name_long", "type": "nominal", "title": "Country"},
-            {"field": "CO2 per capita", "type": "quantitative", "title": "CO2 tonnes per capita"}
-            
-        ]
-        }
-
-        
       },
-      {"transform": [
-          {
-          "window": [{"op": "rank", "as": "ranking"}],
-          "sort": [{"field": "CO2 per capita", "order": "descending"}]
+      {
+        "data": {
+          "url": "https://raw.githubusercontent.com/jpha0018/Assignment2/main/co2_percapita_tidy.csv"
+      },
+      "transform": [{
+          "lookup": "Country",
+          "from": {
+          "data": {
+              "url": "https://raw.githubusercontent.com/jpha0018/Assignment2/main/world_topoj.topojson",      
+              "format": {
+                    "type": "topojson",
+                    "feature": "custom.geo"
+                  }
           },
-          {"filter": "datum.ranking == 1"},
-          {
-          "calculate": "datum['Country'] +' has the highest CO2 emmissions in the selected year, emitting '+ datum['CO2_per_capita'] +' tonnes per capita.'",
-          "as": "text_annotation"
-          }
-        ],
-        "mark": {"type": "text", "align": "left", "dx": 4},
-        "encoding": {
-        "text": {"field": "text_annotation"}
-        }
-        }
-      ]
+          "key": "properties.name_long"          
+          },
+          "as":"geo"
+          },
+          { "filter": "datum.Year == Year_selection" }        
+      ],
   
-  }
+      "mark": {
+      "type": "geoshape", "stroke": "white"
+      },
+      "encoding": {
+        "shape": {
+      "field": "geo",
+      "type": "geojson"
+    },
+      "color": {
+          "field": "CO2 per capita",
+          "type": "quantitative",
+          "scale": {
+          "type": "threshold",
+          "domain": [0.5, 5, 10, 15, 25], 
+          "range": ["#fff2cc", " #ffdf80", " #ffd24d", "#ffc61a", "#e6ac00","#b38600"]
+      }
+      },
+      "tooltip": [
+          {"field": "Country", "type": "nominal", "title": "Country"},
+          {"field": "CO2 per capita", "type": "quantitative", "title": "CO2 tonnes per capita"}
+          
+      ]
+      }
+
+      
+    },
+    {"transform": [
+        {
+        "window": [{"op": "rank", "as": "ranking"}],
+        "sort": [{"field": "CO2 per capita", "order": "descending"}]
+        },
+        {"filter": "datum.ranking == 1"},
+        {
+        "calculate": "datum['Country'] +' has the highest CO2 emmissions in the selected year, emitting '+ datum['CO2_per_capita'] +' tonnes per capita.'",
+        "as": "text_annotation"
+        }
+      ],
+      "mark": {"type": "text", "align": "left", "dx": 4},
+      "encoding": {
+      "text": {"field": "text_annotation"}
+      }
+      }
+    ]
+
+}
