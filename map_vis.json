@@ -89,7 +89,7 @@
         },
         {"filter": "datum.ranking == 1"},
         {
-        "calculate": "datum['Country'] +' has the highest CO2 emmissions in the selected year, emitting '+ datum['CO2_per_capita'] +' tonnes per capita.'",
+        "calculate": "datum['Country'] +' has the highest CO2 emmissions in the selected year, emitting '+ datum['CO2 per capita'] +' tonnes per capita.'",
         "as": "text_annotation"
         }
       ],
