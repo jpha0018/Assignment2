@@ -1,12 +1,13 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": { "text": "Top 10 countries with the most plastic waste in 2016" },
+    "title": { "text": "Top 10 countries with the most plastic waste" },
     "data": {
     "url": "https://raw.githubusercontent.com/jpha0018/Assignment2/main/top10plastic.csv"
     },
     "mark": "bar",
     "encoding": {
         "x": { "field": "Plastic per million metric tonnes", "type": "quantitative" },
-    "y": { "field": "Country", "type": "nominal" }
+    "y": { "field": "Country", "type": "nominal", "sort": null },
+    "color": {"value": "#ff9900"}
  }
 }
