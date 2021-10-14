@@ -1,0 +1,12 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "description": "Stock prices of 5 Tech Companies over Time.",
+    "data": {"url": "https://raw.githubusercontent.com/jpha0018/Assignment2/main/death-rate-from-air-pollution-per-100000.csv"},
+    "mark": "line",
+    "encoding": {
+      "x": {"field": "Year", "type": "temporal"},
+      "y": {"field": "Death rates from air pollution per 100,000", "type": "quantitative"},
+      "color": {"field": "Country", "type": "nominal"}
+    }
+  }
+  
