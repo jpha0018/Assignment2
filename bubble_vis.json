@@ -1,7 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 800,
-    "height": 600,
+
     "title": "Air pollution death rates (2000-2015)",
     "data": {
       "url": "https://raw.githubusercontent.com/jpha0018/Assignment2/main/deathrate_airpol.csv"
