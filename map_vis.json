@@ -1,11 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "CO2 emissions, tonnes per capita (2000-2019)",
-  "width": 800,
-  "height": 600,
+
   "projection": {
     "type": "equalEarth"
   },
+  "width": 380,
+  "height": 140,
   "params": [{
       "name": "Year_selection",
       "value": 2018,
