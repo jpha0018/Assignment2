@@ -5,7 +5,7 @@
       "url": "https://raw.githubusercontent.com/jpha0018/Assignment2/main/oilspill.csv"
     },
     "title":"Number of oil spills by year",
-    "width": 400,
+    "width": 500,
     "height": 200,
 
     "mark": "area",
