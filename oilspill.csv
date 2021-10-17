@@ -1,21 +1,41 @@
-﻿Year,Quantity (Tonnes),No. of small spills,No. of large spills,No. of spills
-2000,14000,21,4,25
-2001,9000,18,3,21
-2002,66000,11,3,14
-2003,43000,19,4,23
-2004,17000,20,5,25
-2005,15000,22,3,25
-2006,12000,12,4,16
-2007,15000,12,3,15
-2008,2000,7,1,8
-2009,3000,7,2,9
-2010,12000,5,4,9
-2011,2000,4,1,5
-2012,1000,7,0,7
-2013,7000,5,3,8
-2014,5000,4,1,5
-2015,7000,6,2,8
-2016,6000,4,1,5
-2017,7000,4,2,6
-2018,116000,3,3,6
-2019,1000,2,1,3
+Year	Spill type	No. of spills
+2000	Small spills	21
+2000	Large spills	4
+2001	Small spills	18
+2001	Large spills	3
+2002	Small spills	11
+2002	Large spills	3
+2003	Small spills	19
+2003	Large spills	4
+2004	Small spills	20
+2004	Large spills	5
+2005	Small spills	22
+2005	Large spills	3
+2006	Small spills	12
+2006	Large spills	4
+2007	Small spills	12
+2007	Large spills	3
+2008	Small spills	7
+2008	Large spills	1
+2009	Small spills	7
+2009	Large spills	2
+2010	Small spills	5
+2010	Large spills	4
+2011	Small spills	4
+2011	Large spills	1
+2012	Small spills	7
+2012	Large spills	0
+2013	Small spills	5
+2013	Large spills	3
+2014	Small spills	4
+2014	Large spills	1
+2015	Small spills	6
+2015	Large spills	2
+2016	Small spills	4
+2016	Large spills	1
+2017	Small spills	4
+2017	Large spills	2
+2018	Small spills	3
+2018	Large spills	3
+2019	Small spills	2
+2019	Large spills	1
