@@ -5,8 +5,8 @@
   "projection": {
     "type": "equalEarth"
   },
-  "width": 480,
-  "height": 280,
+  "width": 450,
+  "height": 250,
   "params": [{
       "name": "Year_selection",
       "value": 2018,
