@@ -1,0 +1,14 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Illnesses caused by indoor air pollution (2019)",
+    "data": {"url":"https://raw.githubusercontent.com/jpha0018/Assignment2/main/illness_perc.csv"},
+    "mark": "arc",
+    "encoding": {
+      "theta": {"field": "Percentage", "type": "quantitative"},
+      "color": {"field": "Type", "type": "nominal"},
+      "tooltip": [
+        {"field": "Type", "type": "nominal", "title": "Illness"},
+        {"field": "Percentage", "type": "quantitative", "title": "Proportion"}
+      ]
+    }
+}

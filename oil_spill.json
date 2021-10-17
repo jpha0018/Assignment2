@@ -1,0 +1,32 @@
+
+  {
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/jpha0018/Assignment2/main/oilspill.csv"
+    },
+    "title":"Number of oil spills by year",
+    "width": 600,
+    "height": 300,
+
+    "mark": "area",
+    "encoding": {
+      "x": {
+        "field": "Year",
+        "timeUnit": "yearmonth",
+        "axis": {"format": "%Y"},
+        "title": ""
+
+      },
+      "y": {"field": "Num of spills", "type": "quantitative", "aggregate": "sum", "title": "Number of spills"},
+      "color": {
+        "field": "Type","type": "nominal",
+        "scale": {"scheme": "dark2"}
+      },
+      "tooltip": [
+        {"field": "Type", "type": "nominal", "title": "Spill type"},
+        {"field": "Year", "type": "temporal","format": "%Y", "title": "Year"},
+        {"field": "Num of spills", "type": "quantitative", "title": "Number of spills"}
+      ]
+    }
+  }
+  

@@ -1,0 +1,14 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Marine pollution sources (2015)",
+    "data": {"url":"https://raw.githubusercontent.com/jpha0018/Assignment2/main/marine%20source.csv"},
+    "mark": "arc",
+    "encoding": {
+      "theta": {"field": "Percentage", "type": "quantitative"},
+      "color": {"field": "Source", "type": "nominal"},
+      "tooltip": [
+        {"field": "Source", "type": "nominal", "title": "Source"},
+        {"field": "Percentage", "type": "quantitative", "title": "Proportion"}
+      ]
+    }
+}

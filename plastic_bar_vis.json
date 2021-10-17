@@ -8,6 +8,11 @@
     "encoding": {
         "x": { "field": "Plastic per million metric tonnes", "type": "quantitative" },
     "y": { "field": "Country", "type": "nominal", "sort": null },
-    "color": {"value": "#ff9900"}
+    "color": {"value": "#ff9900"},
+    
+    "tooltip": [
+    {"field": "Country", "type": "nominal"},
+    {"field": "Plastic per million metric tonnes", "type": "quantitative"}
+    ]
  }
 }

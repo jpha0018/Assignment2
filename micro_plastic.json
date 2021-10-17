@@ -1,0 +1,42 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": { "url": "https://raw.githubusercontent.com/jpha0018/Assignment2/main/plastic_age.csv"},
+    "title":"Microplastic accumulation in the ocean by decade (2019)",
+    "transform": [
+        {"filter":"datum.Ocean == 'Coastal' || datum.Ocean =='Offshore'"}
+    ],
+    "width": {"step": 12},
+    "mark": "bar",
+    "encoding": {
+      "column": {
+        "field": "Decade",
+        "timeUnit": "year",
+        "spacing": 8,
+        "header": {"orient": "bottom"},
+        "title": ""
+      },
+      "y": {
+        "aggregate": "sum", "field": "Amount (Tonnes)",
+        "title": "Amount of plastic (Tonnes)",
+        "axis": {"grid": false}
+      },
+      "x": {
+        "field": "Ocean",
+        "axis": null
+      },
+      "color": {
+        "field": "Ocean",
+        "scale": {"range": ["#D2691E", "#8B008B","#1E90FF"]},
+        "title": "Place of accumulation"
+      },
+      "tooltip": [
+        {"field": "Ocean", "type": "nominal", "title": "Place of accumulation"},
+        {"field": "Decade", "type": "temporal","format": "%Y", "title": "Decade"},
+        {"field": "Amount (Tonnes)", "type": "quantitative", "title": "Amount(Tonnes)"}
+      ]
+    },
+    "config": {
+      "view": {"stroke": "transparent"},
+      "axis": {"domainWidth": 1}
+    }
+  }
