@@ -6,6 +6,8 @@
     "data": {
       "url": "https://raw.githubusercontent.com/jpha0018/Assignment2/main/deathrate_airpol.csv"
     },
+     "width": 480,
+  "height": 280,
     "params": [
       {
         "name": "Population_Above",
