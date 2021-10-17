@@ -1,41 +1,41 @@
-Year	Spill type	No. of spills
-2000	Small spills	21
-2000	Large spills	4
-2001	Small spills	18
-2001	Large spills	3
-2002	Small spills	11
-2002	Large spills	3
-2003	Small spills	19
-2003	Large spills	4
-2004	Small spills	20
-2004	Large spills	5
-2005	Small spills	22
-2005	Large spills	3
-2006	Small spills	12
-2006	Large spills	4
-2007	Small spills	12
-2007	Large spills	3
-2008	Small spills	7
-2008	Large spills	1
-2009	Small spills	7
-2009	Large spills	2
-2010	Small spills	5
-2010	Large spills	4
-2011	Small spills	4
-2011	Large spills	1
-2012	Small spills	7
-2012	Large spills	0
-2013	Small spills	5
-2013	Large spills	3
-2014	Small spills	4
-2014	Large spills	1
-2015	Small spills	6
-2015	Large spills	2
-2016	Small spills	4
-2016	Large spills	1
-2017	Small spills	4
-2017	Large spills	2
-2018	Small spills	3
-2018	Large spills	3
-2019	Small spills	2
-2019	Large spills	1
+Year,Type,No. of spills
+2000,Small,21
+2000,Large,4
+2001,Small,18
+2001,Large,3
+2002,Small,11
+2002,Large,3
+2003,Small,19
+2003,Large,4
+2004,Small,20
+2004,Large,5
+2005,Small,22
+2005,Large,3
+2006,Small,12
+2006,Large,4
+2007,Small,12
+2007,Large,3
+2008,Small,7
+2008,Large,1
+2009,Small,7
+2009,Large,2
+2010,Small,5
+2010,Large,4
+2011,Small,4
+2011,Large,1
+2012,Small,7
+2012,Large,0
+2013,Small,5
+2013,Large,3
+2014,Small,4
+2014,Large,1
+2015,Small,6
+2015,Large,2
+2016,Small,4
+2016,Large,1
+2017,Small,4
+2017,Large,2
+2018,Small,3
+2018,Large,3
+2019,Small,2
+2019,Large,1
