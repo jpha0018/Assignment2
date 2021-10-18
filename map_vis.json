@@ -6,7 +6,7 @@
     "type": "equalEarth"
   },
   "width": 750,
-  "height": 350,
+  "height": 550,
   "params": [{
       "name": "Year_selection",
       "value": 2018,
