@@ -20,7 +20,7 @@
       "y": {"field": "Num of spills", "type": "quantitative", "aggregate": "sum", "title": "Number of spills"},
       "color": {
         "field": "Type","type": "nominal",
-        "scale": {"scheme": "dark2"}
+        "scale": {"range": ["#4772DD", " #FDAC2A"]}
       },
       "tooltip": [
         {"field": "Type", "type": "nominal", "title": "Spill type"},
