@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": { "text": "Top 10 countries with the most plastic waste" },
+    "title": { "text": "Top 10 countries with the most plastic waste (2018)" },
     "width":280,
     "data": {
     "url": "https://raw.githubusercontent.com/jpha0018/Assignment2/main/top10plastic.csv"
