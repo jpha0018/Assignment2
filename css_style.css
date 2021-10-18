@@ -1,25 +1,20 @@
 
-.box {
-    border-top-width: 1px;
-    border-top-style: solid;
-    background-color: rgb(169, 181, 223);
-  }
-
-.body {
-    font-family: 'Source Sans Pro', sans-serif;
-}
-
 h1 {
-    font-weight: 900;
+    font-weight: 1800;
+    text-align: center;
+    color: rgb(202, 147, 28);
+    font-family: 'Calibri', sans-serif;
+    font-size: 50px;
+}
+h2{
+    padding-top: 20px;
+    color: rgb(241, 179, 44);
+
 }
 
 body {
-    background-color: rgb(207, 214, 240);
-}
-.outer{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    background-color: rgb(206, 220, 226);
+    font-family: 'Calibri', sans-serif;
 }
 
 .page {
@@ -28,10 +23,11 @@ body {
     margin: auto;
     padding: 50px;
     padding-top: 35px;
+    
 }
 
 .vis-container {
-    width: 100%;
+    width: 40%;
 }
 
 .description h2,
@@ -53,4 +49,8 @@ h1 {
 
 .small-font {
     font-size: 14px;
+}
+.center{
+    width: 50%;
+
 }
